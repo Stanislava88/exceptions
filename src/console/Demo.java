@@ -10,9 +10,9 @@ import java.util.InputMismatchException;
 public class Demo {
   public static void main(String[] args) {
     try {
-      ConsoleNum num = new ConsoleNum();
+      Number num = new Number();
       System.out.println("Enter number :");
-      num.readNum();
+      num.read();
     } catch (OutsideOfIntervalException exc) {
       System.out.println(exc.getMessage());
     } catch (InputMismatchException ex) {

@@ -6,8 +6,8 @@ import java.util.Scanner;
 /**
  * @author Stanislava Kaukova(sisiivanovva@gmail.com)
  */
-public class ConsoleNum {
-  public boolean readNum() throws OutsideOfIntervalException {
+public class Number {
+  public boolean read() throws OutsideOfIntervalException {
     Scanner input = new Scanner(System.in);
     int number = input.nextInt();
     if (number > 0 && number < 100) {
