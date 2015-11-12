@@ -1,19 +1,20 @@
 package console;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author Stanislava Kaukova(sisiivanovva@gmail.com)
  */
 public class Number {
-  public boolean read() throws OutsideOfIntervalException {
+  public boolean readNumber() throws OutsideOfIntervalException {
     Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int m = input.nextInt();
     int number = input.nextInt();
-    if (number > 0 && number < 100) {
+    if (number > n && number < m) {
       return true;
     } else {
-      throw new OutsideOfIntervalException("This number is outside interval.Please enter number from 0 to 100");
+      throw new OutsideOfIntervalException("This number is outside interval.Please enter number from n to m");
     }
   }
 }
