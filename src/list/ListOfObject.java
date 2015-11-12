@@ -1,6 +1,5 @@
 package list;
 
-
 import java.util.Arrays;
 
 /**
@@ -9,19 +8,18 @@ import java.util.Arrays;
 public class ListOfObject {
   private int size = 5;
   private Object[] list = new Object[size];
-  public int i=0;
+  public int i = 0;
 
   public void add(Object obj) {
-    if(i<list.length)
-      list[i] =obj;
-    i++;
+    if (i < list.length) {
+      list[i] = obj;
+      i++;
+    }
   }
 
   public void remove() {
-    if (list[list.length - 1] != null) {
-      list[list.length - 1] = null;
-      System.out.println(Arrays.toString(list));
-    }
+    list[i - 1] = null;
+    i--;
   }
 
   public void printAllElements() {
