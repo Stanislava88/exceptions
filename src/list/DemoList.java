@@ -16,7 +16,6 @@ public class DemoList {
     list.printAllElements();
     System.out.println("After remove:");
     list.remove();
-    list.remove();
     list.printAllElements();
   }
 }

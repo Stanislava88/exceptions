@@ -18,7 +18,7 @@ public class ListOfObject {
   }
 
   public void remove() throws EmptyListException {
-    if (list[i] == null) {
+    if (list[0] == null) {
       throw new EmptyListException("You can not removed any elements.The list is empty");
     } else {
       list[i - 1] = null;
