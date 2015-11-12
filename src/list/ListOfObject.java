@@ -10,9 +10,13 @@ public class ListOfObject {
   private Object[] list = new Object[size];
   public int i = 0;
 
-  public void add(Object obj) throws FullListException {
+  public void add(Object obj) throws FullListException, NullValueException {
     if (i < list.length) {
+      if (obj == null) {
+        throw new NullValueException("The current object is null");
+      }
       list[i] = obj;
+
       i++;
     } else throw new FullListException("The list is full.You can not add element!!!");
   }
