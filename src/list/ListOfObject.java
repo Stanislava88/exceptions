@@ -10,16 +10,20 @@ public class ListOfObject {
   private Object[] list = new Object[size];
   public int i = 0;
 
-  public void add(Object obj) {
+  public void add(Object obj) throws FullListException {
     if (i < list.length) {
       list[i] = obj;
       i++;
-    }
+    } else throw new FullListException("The list is full.You can not add element!!!");
   }
 
-  public void remove() {
-    list[i - 1] = null;
-    i--;
+  public void remove() throws EmptyListException {
+    if (list[i] == null) {
+      throw new EmptyListException("You can not removed any elements.The list is empty");
+    } else {
+      list[i - 1] = null;
+      i--;
+    }
   }
 
   public void printAllElements() {

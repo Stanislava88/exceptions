@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Stanislava Kaukova(sisiivanovva@gmail.com)
  */
 public class DemoList {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws EmptyListException, FullListException {
     ListOfObject list = new ListOfObject();
     list.add("Ivan");
     list.add(16);
@@ -15,6 +15,7 @@ public class DemoList {
     list.add(28);
     list.printAllElements();
     System.out.println("After remove:");
+    list.remove();
     list.remove();
     list.printAllElements();
   }
